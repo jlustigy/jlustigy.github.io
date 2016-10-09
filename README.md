@@ -1,3 +1,1 @@
-# My Website!
-
-### Check it out at [jlustigy.github.io](https://jlustigy.github.io/)
+# Source Code for [jlustigy.github.io](https://jlustigy.github.io/)
