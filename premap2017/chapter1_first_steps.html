@@ -11787,6 +11787,13 @@ div#notebook {
 <p>e. Enable this new file:</p>
 <div class="highlight"><pre><span></span><span class="nb">source</span> ~/.cshrc
 </pre></div>
+<p>This is equivalent to starting a new Terminal. In the future, this file will be active.</p>
+<p>f. Check to make sure you have the correct <code>IDL</code> version. Type:</p>
+<div class="highlight"><pre><span></span>which idl
+</pre></div>
+<p>You should see the following:</p>
+
+<pre><code> idl:      aliased to /astro/apps6/opt/idl83/idl83/bin/idl</code></pre>
 </li>
 <li><p><strong>Make a working directory to contain the simulations that you will be using as input into the phase curve code:</strong></p>
 <p>a. Probably want to do this on gradscratch or vpl1...</p>
@@ -11806,7 +11813,8 @@ div#notebook {
 <p>b. Copy SMART output files from Jake into <code>earth</code> directory:</p>
 <div class="highlight"><pre><span></span>cp /astro/store/gradscratch/tmp/jlustigy/phasecurves/earth_model_water_pix_test/smart_*_toa.r* earth/
 </pre></div>
-<p>c. Open the file called <code>run_phasecurve.pro</code>:</p>
+<p>This make take a few minutes.<br>
+ c. Open the file called <code>run_phasecurve.pro</code>:</p>
 <div class="highlight"><pre><span></span>gedit run_phasecurve.pro <span class="p">&amp;</span>
 </pre></div>
 <p>d. Change variables to the following (if not already):</p>
@@ -11824,7 +11832,7 @@ div#notebook {
  Licensed for use by: University of Washington  
  IDL&gt;</code></pre>
 <p>This last line (<code>IDL&gt;</code>) is the <code>IDL</code> command line interface where you can type code into.<br>
- g. Type the following lines into the <code>IDL</code> command line, one line at a time, hitting <enter> after each:</p>
+ g. Type the following lines into the <code>IDL</code> command line, one line at a time, hitting <code>&lt;enter&gt;</code> after each:</p>
 <div class="highlight"><pre><span></span>.r smart_phasecurve
  .r smart_phasecurve
  .r run_phasecurve
@@ -11841,7 +11849,7 @@ div#notebook {
  h. Copy Jake's plotting notebook into your phasecurve directory:</p>
 <div class="highlight"><pre><span></span>cp /astro/store/gradscratch/tmp/jlustigy/phasecurves/plot_results1.ipynb .
 </pre></div>
-<p>and open it as a <code>jupyter notebook</code>.</p>
+<p>and open it as a <code>jupyter notebook</code>. The notebook contains instruction for how to use it.</p>
 </li>
 </ol>
 
