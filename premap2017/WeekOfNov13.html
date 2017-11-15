@@ -11789,6 +11789,57 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-C:-Comparative-Planetology">Part C: Comparative Planetology<a class="anchor-link" href="#Part-C:-Comparative-Planetology">&#182;</a></h2><ol>
+<li>Open your notebook for the Solar System plot with multiple spectra on it, and add lines of code to read-in the files and add addition lines to the plot for these two new planets. </li>
+<li>Jot down (a) five wavelengths (or wavelength ranges) where the planetary spectra are noticably different and (b) five wavelengths where the spectra (or two spectra) have noticably similar features. You could use the following line of code to draw a shaded region between two x-values (<code>x1</code> and <code>x2</code>) on a plot to highlight a wavelength region that you are discussing: 
+<pre><code> ax.axvspan(x1, x2, color="grey", alpha=0.3)</code></pre>
+</li>
+<li>Considering the fact that (a) Venus has a global haze layer and has a thick atmosphere composed of CO$_2$; (b) Mars has a thin atmosphere composed of CO$_2$; and Earth has a N$_2$ and O$_2$ dominated atmosphere with small amounts of CO$_2$ mixed in, try to explain the differences (2a) and similarities (2b) you noted between the spectra in the context of the basic atmospheric details listed above. </li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-D:-Partial-Clouds">Part D: Partial Clouds<a class="anchor-link" href="#Part-D:-Partial-Clouds">&#182;</a></h2><p>For Earth and for many planets, the existence of partial or patchy clouds has a distinct effect on the spectrum. However, one of the downsides of our modeling is that we are using a single 1-dimensional vertical atmospheric column to describe the entire atmosphere. We can approximately remedy this caveat by linearly combining two (or more) spectra into a new single spectrum that contains contributions from both original spectra, thereby allowing us to account for patchy clouds. Here you will write the code to perform this calculation.</p>
+<ol>
+<li>Open up a new notebook (where the Solar System spectra notebook is) called <code>linear_combination_spectrum</code></li>
+<li>This notebook can borrow a lot from the Solar System spectra notebook, so copy over the first few cells, including up through where the spectrum files get read-in. </li>
+<li>Now, let's read-in both the clear and the global dust storm Mars (this was the first one we did) spectra at 90 degrees.</li>
+<li><p>Calculate the linear combination of the radiances and albedo. Suppose that we want to do 40% clearsky Mars and 60% global dust storm (note that we always want the percentages to add up to 100%), then let's define fractional coefficients for both of these cases:</p>
+
+<pre><code> # Fraction of clearsky
+ f_clear = 0.4
+ # Fraction of dust storm
+ f_storm = 0.6</code></pre>
+<p>Now we simply calculate a new radiance and a new albedo by computing a weighted sum of the original radiances and albedos:</p>
+
+<pre><code> # Linearly combine radiances
+ rad_new = f_clear * rad_clear + f_storm * rad_storm
+
+ # Linearly combine albedos
+ alb_new = f_clear * alb_clear + f_storm * alb_storm</code></pre>
+</li>
+<li>Make an albedo plot with the two original spectra and the new linearly combined spectrum. Does the new spectrum all between the two original spectra? </li>
+<li>Play with different clear and dust storm fractions to verify that the combined spectrum makes sense. Note that you could define:
+<pre><code> f_storm = 1.0 - f_clear</code></pre>
+so that you mathematically enforce the condition that the percentages add to 100%. </li>
+<li>Once you are content that the linear combination code seems to be working, try changing the phase angles to some of the other phases we smiulated. Make notes of how the combined spectrum shifts with phase. Does it appear more similar to one of the original spectra at certain phases?  </li>
+<li>Now try the same exercse with the Earth simulations. Unfortunately, we still don't have the clearsky Earth simulations working, but we do have four different types of clouds! Generalize steps 3-5 above to calculate the linear combination of <em>all four</em> cloudy cases (start with 25% combination of each), and plot all four original albedo spectra and the new albedo spectrum. </li>
+</ol>
+
+</div>
+</div>
+</div>
     </div>
   </div>
 </body>
