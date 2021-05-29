@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Research</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrollgress.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.slidertron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        
+        <!-- Used for includeContent -->
+        <script src="jquery.js"></script> 
+        
+         <!-- Include Header external html file -->
+        <script> 
+        $(function(){
+            $("#includedHeader").load("header_page.html"); 
+        });
+        </script>
+        
+        <!-- Include Footer external html file -->
+        <script> 
+        $(function(){
+            $("#includedFooter").load("footer.html"); 
+        });
+        </script> 
+        
+	</head>
+	<body>
+
+		<!-- Header -->
+        <div id="includedHeader"></div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper style1">
+				<header class="major">
+					<h2>Research</h2>
+					<p>Exoplanets &nbsp;•&nbsp; Atmospheric Characterization &nbsp;•&nbsp; Habitability &nbsp;•&nbsp; Biosignatures</p>
+				</header>
+				<div class="container">
+					
+                    <div class="row 150%">
+						<div class="4u 12u$(2)">
+						
+							<!-- Sidebar -->
+								<section id="sidebar">
+									<section>
+                                        <center>
+										<h2>Recent News</h2>
+                                        </center>
+                                        <hr />
+                                        
+                                        <h1>The Pale Green Dot: Exoplanet Aurorae</h1>
+                                        <a href="resources/files/OI_ref_spec.png" class="image fit"><img src="resources/files/OI_ref_spec_small.png" alt="Example optical reflectance spectrum of Proxima b showing OI auroral emission spike at 5577 angstroms" /></a>
+										<p>
+                                            In a recently submitted paper by Rodrigo Luger, myself, and collaborators, we 
+                                            show how future observations of auroral emission from the potentially habitable exoplanet, 
+											Proxima b, can be used to constrain many key parameters, such as the inclination (and therefore mass!) 
+											and presence of an atmosphere. 
+                                        </p>
+										<footer>
+                                            <center>
+											<ul class="actions">
+												<li><a href="https://arxiv.org/abs/1609.09075" class="button special small alt">Read Paper</a></li>
+											</ul>
+                                            </center>
+										</footer>
+									</section>
+									
+                                    <hr />
+									
+                                    <section>
+                                        <h1>The Habitability of Proxima Centauri b</h1>
+                                        <a href="resources/files/proxcen_habitable.png" class="image fit"><img src="resources/files/proxcen_habitable.png" alt="Computer rendering of Proxima b if it exists in a state similar to that of Earth" /></a>
+										<p>
+                                            The recently discovered exoplanet, Proxima Centauri b, orbits in the habitable zone of the 
+											nearest star to the Sun. As a result of its close proximity, it will go on to be one of the 
+											most well studied exoplanets. In two papers led by my advisors Vikki Meadows and Rory Barnes, 
+											we investigate plausible histories that this planet may have undergone so as to exist where we 
+											see it today. Some of these paths lead to the planet being habitable, others do not. We also 
+											show how we may go on to discriminate between these unique planetary states using future 
+											spectroscopic observations. 
+                                        </p>
+										<footer>
+											<ul class="actions small">
+										      <li><a href="https://arxiv.org/abs/1608.06919" class="button special small">Paper 1</a></li>
+										      <li><a href="https://arxiv.org/abs/1608.08620" class="button special small">Paper 2</a></li>
+									       </ul>
+										</footer>
+									</section>
+								</section>
+
+						</div>
+						
+                        <div class="8u 12u$(2) important(2)">
+							<!-- Content -->
+								<section id="content">
+									<!-- <a href="#" class="image fit"><img src="images/slide02.jpg" alt="" /></a> -->
+                                    <p>
+                                        My research revolves around the central theme of extracting physical insights 
+										from astronomical observations of terrestrial exoplanets. From the planets in 
+										the Solar System we know that planets can be rich with complexity. But like the 
+										study of stars, exoplanets are (at best) point sources of light. That is, all 
+										light from the planet falls into a single dot on a telescope CCD. To learn 
+										about the underlying nature of terrestrial exoplanets we must carefully examine 
+										that one dot. 
+                                        <br /><br />
+                                        <i>"Look again at that dot."</i>  — Carl Sagan   
+                                    </p>
+									
+                                    <h3>Spectroscopy: Atmospheric Retrieval</h3>
+                                    <p>
+                                        Observing the spectrum of an exoplanet allows for its atmosphere to be investigated. 
+										However, interpreting these observations is difficult due to both noise and intrnsic 
+										planetary complexity, and requires an atmospheric retrieval model to extract information 
+										such as the abundances of spectrally active gases, the presence and composition of 
+										clouds and hazes, and the thermal structure. 
+                                        <br /><br />
+                                        I am leading the development of a novel exoplanet atmospheric retrieval code for the 
+										analysis of forthcoming terrestrial exoplanet spectra. At its core, the retrieval model 
+										leverages the Spectral Mapping Atmospheric Radiative Transfer (SMART) code which has 
+										been used to accurately model spectra of Earth, Venus, Mars, and Titan. 
+                                    </p>
+                                    
+                                    <h3>Time-Series: Mapping</h3>
+                                    <p>
+                                        Observing multiband, time-series photometery of an exoplanet as it rotates on its 
+										axis allows for the distribution and types of surfaces to be investigated. Even 
+										though no direct spatial information is contained in exoplanet observations, 
+										"rotational unmixing" offers an opportunity to infer spatial variations using 
+										the fact that planets spin on their axes as they orbit their host star. 
+                                    </p>
+									
+								</section>
+								
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		<!-- Footer -->
+        <div id="includedFooter"></div>
+
+	</body>
+</html>
